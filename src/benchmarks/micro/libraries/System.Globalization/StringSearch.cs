@@ -1,4 +1,4 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 // See the LICENSE file in the project root for more information.
 
@@ -62,7 +62,7 @@ namespace System.Globalization.Tests
             if (Options.highChars)
             {
                 characters[0] = (char)0x81; // at the begning for IndexOf and StartsWith
-                characters[characters.Length - 1] = (char)0x81; // at the begning for LastIndexOf and EndsWith
+                characters[^1]= (char)0x81; // at the begning for LastIndexOf and EndsWith
             }
 
             _value = new string(characters);
@@ -74,7 +74,7 @@ namespace System.Globalization.Tests
             copy[0] = (char)(Options.highChars ? copy[0] * 2 : copy[0] + 1);
             _diffAtFirstChar = new string(copy);
             copy = characters.ToArray();
-            copy[characters.Length - 1] = (char)(Options.highChars ? copy[characters.Length - 1] * 2 : copy[characters.Length - 1] + 1);
+            copy[^1]= (char)(Options.highChars ? copy[^1]* 2 : copy[^1]+ 1);
             _diffAtLastChar = new string(copy);
 
             // now we need to ensure that the test data is correct to avoid issues like https://github.com/dotnet/performance/pull/909

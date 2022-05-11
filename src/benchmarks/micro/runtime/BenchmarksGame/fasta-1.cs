@@ -219,7 +219,7 @@ namespace BenchmarksGame
                 if (r < a[i].p)
                     return a[i].c;
 
-            return a[a.Length - 1].c;
+            return a[^1].c;
         }
 
         static void MakeCumulative(Frequency[] a)

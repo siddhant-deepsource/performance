@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Copyright (C) 2018 Apple Inc. All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -432,7 +432,7 @@ namespace JetStream {
                 segmentation[k - 1] = segmentEnd;
             }
 
-            var costOfOptimalSegmentation = cost[values.Length - 1][segmentCount];
+            var costOfOptimalSegmentation = cost[^1][segmentCount];
 
             return new OptimalSegmentation {segmentation = segmentation, cost = costOfOptimalSegmentation};
         }

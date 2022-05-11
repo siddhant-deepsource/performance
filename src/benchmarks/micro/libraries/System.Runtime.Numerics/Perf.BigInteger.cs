@@ -159,7 +159,7 @@ namespace System.Numerics.Tests
 
                     // ensure actual bit count (remaining bits not set)
                     // ensure positive value (highest-order bit not set)
-                    value[value.Length - 1] &= (byte) (0xFF >> 8 - bits % 8);
+                    value[^1]&= (byte) (0xFF >> 8 - bits % 8);
 
                     result = new BigInteger(value);
                 }

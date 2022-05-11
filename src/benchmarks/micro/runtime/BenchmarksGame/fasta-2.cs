@@ -121,7 +121,7 @@ namespace BenchmarksGame
                 if (r < a[i].p)
                     return a[i].c;
 
-            return a[a.Length - 1].c;
+            return a[^1].c;
         }
 
         const int LineLength = 60;
