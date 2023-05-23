@@ -1,4 +1,4 @@
-﻿using DataTransferContracts;
+using DataTransferContracts;
 using Newtonsoft.Json;
 using Perfolizer.Mathematics.Multimodality;
 using System;
@@ -60,7 +60,7 @@ namespace ResultsComparer
             }
             catch (JsonSerializationException)
             {
-                Console.WriteLine($"Exception while reading the JSON file.");
+                Console.WriteLine("Exception while reading the JSON file.");
 
                 throw;
             }

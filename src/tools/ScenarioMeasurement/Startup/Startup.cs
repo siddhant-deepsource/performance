@@ -1,4 +1,4 @@
-﻿using Reporting;
+using Reporting;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -453,7 +453,7 @@ namespace ScenarioMeasurement
                 var test = InnerLoopMarkerEventSource.GetSources();
                 InnerLoopMarkerEventSource.Log.Split();
 
-                logger.LogIterationHeader($"Iteration - Diff");
+                logger.LogIterationHeader("Iteration - Diff");
                 var iterationResult = RunProcess(TestProcess);
                 if (!iterationResult.Success)
                 {

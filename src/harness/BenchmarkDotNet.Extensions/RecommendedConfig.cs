@@ -1,4 +1,4 @@
-﻿using BenchmarkDotNet.Columns;
+using BenchmarkDotNet.Columns;
 using BenchmarkDotNet.Configs;
 using BenchmarkDotNet.Diagnosers;
 using BenchmarkDotNet.Exporters;
@@ -99,7 +99,7 @@ namespace BenchmarkDotNet.Extensions
                 return new string[0];
 
             // Get all existing report files, of any export type; order by descending filename length to avoid rename collisions
-            var existingBenchmarks = artifacts.GetFiles($"*-report-*", SearchOption.AllDirectories)
+            var existingBenchmarks = artifacts.GetFiles("*-report-*", SearchOption.AllDirectories)
                 .OrderByDescending(resultFile => resultFile.FullName.Length)
                 .SelectMany(resultFile =>
                 {
